@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="popup.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -12,17 +12,26 @@
 </header>
   
   <button type="button" onclick="buyTicket()">Buy Tickets</button>
-  <p id="name"></p>
   
+  <span class="popupform" id="myPopup">
   <form method="post" action="ticket_form.php">
-    Full name: <input type="text" name="fullName" value="fullName">
-    Account Number: <input type="text" name="accountNum" value="accountNum">
-    Sort Code: <input type="text" name="sortCode" value="sortCode">
-    Expiry Date: <input type="text" name="expiryDate" value="expiryDate">
-    Number of Tickets: <input type="text" name="numOfTickets" value="numOfTickets">
+    Full name: <input type="text" name="fullName" value="fullName"><br />
+    Account Number: <input type="text" name="accountNum" value="accountNum"><br />
+    Sort Code: <input type="text" name="sortCode" value="sortCode"><br />
+    Expiry Date: <input type="text" name="expiryDate" value="expiryDate"><br />
+    Number of Tickets: <input type="text" name="numOfTickets" value="numOfTickets"><br />
     <input type="submit">
   </form>
+  </span>
+  
+  <p id="name"></p>
 
+  <script>
+  function buyTicket() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+  </script>
 
 <footer>
   <h1>Footer</h1>
