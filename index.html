@@ -11,9 +11,9 @@
   <h1>Header</h1>
 </header>
   
-  <input type="submit" class="popup" onclick="buyTicket()" name="Buy Ticket/s">
+  <button onclick="buyTicket()">Buy Ticket/s</button>
   
-  <span class="popupform" id="myPopup">
+  <div id="ticketForm">
   <form method="post" action="ticket_form.php">
     Full name: <input type="text" name="fullName"><br />
     Account Number: <input type="text" name="accountNum"><br />
@@ -22,14 +22,18 @@
     Number of Tickets: <input type="text" name="numOfTickets"><br />
     <input type="submit">
   </form>
-  </span>
+  </div>
   
   <p id="name"></p>
 
   <script>
   function buyTicket() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
+  var x = document.getElementById("ticketForm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
   }
   </script>
 
