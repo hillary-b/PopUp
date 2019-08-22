@@ -36,6 +36,17 @@
   }
   }
   </script>
+  
+  <?php
+    $ticketsLeft = 50;
+    if (isset($POST['submit'])){
+      if ($_POST['numOfTickets'] <= ticketsLeft){
+        ticketsLeft = ticketsLeft - $_POST['numOfTickets']
+      }else{
+        echo "Not enough tickets left, Please request a new ammount";
+      }      
+    }
+  ?>
 
 <footer>
   <h1>Footer</h1>
