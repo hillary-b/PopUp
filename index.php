@@ -14,7 +14,7 @@
   <button onclick="buyTicket()">Buy Ticket(s)</button>
   
   <div id="ticketForm">
-  <form method="POST" action="">
+  <form method="POST" action="ticket_form.php">
     Full name: <input type="text" name="fullName"><br />
     Account Number: <input type="text" name="accountNum"><br />
     Sort Code: <input type="text" name="sortCode"><br />
